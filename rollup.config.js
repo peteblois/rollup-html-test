@@ -11,7 +11,10 @@ export default {
   sourceMap: 'inline',
   plugins: [
     nodeResolve({ jsnext: true }),
-    htmlImport({include: '**/*.html' }),
+    htmlImport({
+      include: '**/*.html',
+      sourceMap: true
+    }),
     commonjs(),
     babel({
       exclude: 'node_modules/**',

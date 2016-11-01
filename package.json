@@ -34,5 +34,8 @@
     "readable-stream": "2.0.6",
     "once": "1.4.0",
     "glob": "4.5.3"
+  },
+  "scripts": {
+    "build": "rollup -c"
   }
 }
