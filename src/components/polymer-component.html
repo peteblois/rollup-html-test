@@ -1,0 +1,25 @@
+<!-- TODO: Should be able to use href='@polymer/paper-button/paper-button.html' -->
+<link rel='import' href='../../node_modules/@polymer/paper-button/paper-button.html'>
+<link rel='import' href='../../node_modules/@polymer/polymer/polymer.html'>
+
+<dom-module id='polymer-component'>
+  <template>
+    <h2>This is a polymer declared component.</h2>
+    <i>containing...</i>
+    <div id='react'></div>
+  </template>
+</dom-module>
+
+<script>
+  import React from 'react';
+  import ReactDOM from 'react-dom';
+  import { ReactComponent } from './react-component.jsx';
+
+  Polymer({
+    is: 'polymer-component',
+
+    attached() {
+      ReactDOM.render(<ReactComponent />, this.$.react);
+    }
+  });
+</script>
